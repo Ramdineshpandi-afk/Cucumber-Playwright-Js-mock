@@ -1,0 +1,60 @@
+name: Playwright + Cucumber CI
+
+# Trigger the workflow on push and pull requests
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    # Set up the environment
+    steps:
+      # Step 1: Checkout the code from the repository
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Step 2: Set up Node.js environment (with Playwright)
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'  # Specify your Node.js version here
+
+      # Step 3: Install dependencies (npm install)
+      - name: Install dependencies
+        run: |
+          npm install
+
+      # Step 4: Install Playwright browsers
+      - name: Install Playwright Browsers
+        run: |
+          npx playwright install --with-deps
+
+      # Step 5: Run tests with Cucumber
+      - name: Run Cucumber Tests
+        run: |
+          npx cucumber-js --require-module ts-node/register --require tests/steps/**/*.ts
+
+      # Step 6: Upload Playwright Test Artifacts (optional)
+      - name: Upload Playwright Test Artifacts (screenshots, videos)
+        uses: actions/upload-artifact@v2
+        with:
+          name: playwright-artifacts
+          path: |
+            test-results/
+            screenshots/
+            videos/
+            
+      # Optional: Save Playwright test results for debugging
+      - name: Save Playwright Test Results
+        if: always()
+        run: |
+          echo "Playwright Test Results"
+          cat test-results/*.json

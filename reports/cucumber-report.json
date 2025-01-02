@@ -1,0 +1,119 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login-functionality-for-sauce-demo-site;standard-user-logs-in",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Standard user logs in",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 514332
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I am on sauce demo login page as \"standard_user\"",
+            "match": {
+              "location": "file:/Users/magizhvendharanadheeran/Documents/playwright-cucumber-js/tests/steps/login.step.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 949145458
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "I login as \"standard_user\"",
+            "match": {
+              "location": "file:/Users/magizhvendharanadheeran/Documents/playwright-cucumber-js/tests/steps/login.step.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 59374583
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 109416
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login-functionality-for-sauce-demo-site;locked-user-logs-in",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Locked user logs in",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 115208
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "I am on sauce demo login page as \"locked_user\"",
+            "match": {
+              "location": "file:/Users/magizhvendharanadheeran/Documents/playwright-cucumber-js/tests/steps/login.step.js:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 934100125
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I login as \"locked_user\"",
+            "match": {
+              "location": "file:/Users/magizhvendharanadheeran/Documents/playwright-cucumber-js/tests/steps/login.step.js:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 60722707
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 156542
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login-functionality-for-sauce-demo-site",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login functionality for sauce demo site",
+    "tags": [],
+    "uri": "tests/features/login.feature"
+  }
+]
